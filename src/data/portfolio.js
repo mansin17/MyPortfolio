@@ -17,8 +17,8 @@ export const profile = {
   email: "mansinavale17@gmail.com",
   resumeUrl: "", // optional: link to hosted resume PDF
   socials: {
-    github: "", // add your GitHub profile URL
-    linkedin: "", // add your LinkedIn profile URL
+    github: "https://github.com/mansin17", // add your GitHub profile URL
+    linkedin: "https://www.linkedin.com/in/mansi-navale-4281361b3/", // add your LinkedIn profile URL
     twitter: "",
   },
 };
