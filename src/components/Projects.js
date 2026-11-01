@@ -8,9 +8,20 @@ export default function Projects() {
       <SectionTitle kicker="Things I've built" title="Featured Projects" />
 
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
+        {projects.map((project, i) => {
+          const cardUrl = project.liveUrl || project.codeUrl;
+          return (
           <Reveal key={project.title} delay={i * 120}>
-            <article className="glass group flex h-full flex-col overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10">
+            <article className="glass group relative flex h-full flex-col overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10">
+              {cardUrl && (
+                <a
+                  href={cardUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.title}`}
+                  className="absolute inset-0 z-20"
+                />
+              )}
               <div
                 className={`relative flex h-44 items-center justify-center bg-gradient-to-br ${project.accent} opacity-90`}
               >
@@ -39,7 +50,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-6 flex gap-4 text-sm font-semibold">
+                <div className="relative z-30 mt-6 flex gap-4 text-sm font-semibold">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
@@ -47,7 +58,7 @@ export default function Projects() {
                       rel="noreferrer"
                       className="gradient-text transition-opacity hover:opacity-70"
                     >
-                      Live demo →
+                      Live demo
                     </a>
                   )}
                   {project.codeUrl && (
@@ -55,7 +66,7 @@ export default function Projects() {
                       href={project.codeUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slate-300 transition-colors hover:text-white"
+                      className="ml-auto text-slate-300 transition-colors hover:text-white"
                     >
                       Source code
                     </a>
@@ -64,7 +75,8 @@ export default function Projects() {
               </div>
             </article>
           </Reveal>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

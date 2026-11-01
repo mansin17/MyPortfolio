@@ -17,8 +17,8 @@ export const profile = {
   email: "mansinavale17@gmail.com",
   resumeUrl: "", // optional: link to hosted resume PDF
   socials: {
-    github: "https://github.com/mansin17", // add your GitHub profile URL
-    linkedin: "https://www.linkedin.com/in/mansi-navale-4281361b3/", // add your LinkedIn profile URL
+    github: "https://github.com/mansin17",
+    linkedin: "https://www.linkedin.com/in/mansi-navale-4281361b3/",
     twitter: "",
   },
 };
@@ -30,7 +30,7 @@ export const about = {
     "When I'm not coding, you'll find me exploring new tech, sharpening my UI craft, or sipping chai.",
   ],
   stats: [
-    { value: "4+", label: "Years Experience" },
+    { value: "4.5", label: "Years Experience" },
     { value: "35%", label: "Perf. Improvement" },
     { value: "5", label: "Awards Won" },
   ],
@@ -98,7 +98,7 @@ export const projects = [
     description:
       "Led complete frontend development of a dynamic, adaptive registration form using ReactJS and Redux Toolkit. Real-time client-side rendering eliminated full-page reloads, and OTP + Google Sign-In (OAuth 2.0) cut login drop-offs significantly.",
     tech: ["ReactJS", "Redux Toolkit", "OAuth 2.0", "OTP Auth"],
-    liveUrl: "",
+    liveUrl: "https://www.careers360.com/user/register",
     codeUrl: "",
     accent: "from-violet-500 to-fuchsia-500",
     emoji: "📝",
@@ -113,7 +113,8 @@ export const projects = [
     description:
       "Architected and delivered scalable frontend modules for College Detail Migration and the User Dashboard at Careers360, improving overall platform stability and maintainability.",
     tech: ["Next.js", "ReactJS", "SSR", "REST APIs"],
-    liveUrl: "",
+    liveUrl:
+      "https://www.careers360.com/university/indian-institute-of-technology-delhi",
     codeUrl: "",
     accent: "from-cyan-500 to-blue-500",
     emoji: "🎓",
@@ -124,18 +125,18 @@ export const projects = [
     ],
   },
   {
-    title: "AI-Powered Frontend Features",
+    title: "AI Frontend Toolkit",
     description:
-      "Explored and integrated AI-powered features into frontend applications — including LLM-based chat interfaces, AI-driven content recommendations, and intelligent search workflows using OpenAI and Anthropic APIs with streaming (SSE) support.",
-    tech: ["OpenAI API", "Anthropic API", "SSE Streaming", "ReactJS"],
-    liveUrl: "",
-    codeUrl: "",
+      "A React + TypeScript app exploring three AI-powered frontend patterns — a streaming chat interface (SSE), AI-driven content recommendations with structured JSON output, and RAG-style natural-language search — backed by a thin Express proxy that keeps API keys off the client. Groq, Gemini and OpenRouter are swappable at runtime.",
+    tech: ["React", "TypeScript", "Express", "SSE Streaming", "Tailwind CSS"],
+    liveUrl: "https://spark-prompt.netlify.app/",
+    codeUrl: "https://github.com/mansin17/ai-frontend-toolkit",
     accent: "from-emerald-500 to-teal-500",
     emoji: "🤖",
     highlights: [
-      "Built AI chat UI components with streaming responses",
-      "Applied prompt engineering for frontend-driven workflows",
-      "Actively growing hands-on AI/LLM integration experience",
+      "Token-by-token chat streaming via fetch() + manually parsed SSE",
+      "Provider abstraction over 3 LLM APIs using one OpenAI-compatible SDK",
+      "Per-IP rate limiting and server-only API keys for safe public deploys",
     ],
   },
 ];
